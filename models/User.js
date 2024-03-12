@@ -3,23 +3,32 @@ import mongoose from "mongoose";
 const userSchema = new mongoose.Schema({
 	DNI: {
 		type: String,
-		require: true,
+		default: XXXXXXXXXXXXXXX,
 	},
 	name: {
 		type: String,
-		require: true,
+		default: 'Juan',
 	},
 	lastname: {
 		type: String,
-		require: true,
+		defautl: 'Perez',
 	},
-	dob: Number,
+	dob: {
+		type: Number,
+		default: XXXXXX,
+	},
 	rol: {
 		type: String,
 		require: true,
 	},
-	phone: String,
-	email: String,
+	phone: {
+		type: String,
+		default: 'XXXXXXXXXX'
+	},
+	email: {
+		type: String,
+		default: 'xxx@email.com'
+	},
 	username: {
 		type: String,
 		require: true,
