@@ -1,0 +1,15 @@
+{
+  "name": "proyecto-backend-cine",
+  "version": "1.0.0",
+  "description": "\"Estructura basica backend cine con express y mongodb\"",
+  "main": "server.js",
+  "type":"module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "fc",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.3"
+  }
+}
