@@ -3,7 +3,7 @@ import mongoose from "mongoose";
 const userSchema = new mongoose.Schema({
 	DNI: {
 		type: String,
-		default: XXXXXXXXXXXXXXX,
+		default: '1234'
 	},
 	name: {
 		type: String,
@@ -11,37 +11,36 @@ const userSchema = new mongoose.Schema({
 	},
 	lastname: {
 		type: String,
-		defautl: 'Perez',
+		default: 'Perez',
 	},
 	dob: {
-		type: Number,
-		default: XXXXXX,
+		type: String,
+		default: '121212',
 	},
 	rol: {
 		type: String,
-		require: true,
+		default: 'Cliente',
 	},
 	phone: {
 		type: String,
-		default: 'XXXXXXXXXX'
+		default: 'XXX XXX XXXX'
 	},
 	email: {
 		type: String,
-		default: 'xxx@email.com'
+		default: 'user@mail.com'
 	},
 	username: {
 		type: String,
-		require: true,
+		default: 'juanperez',
 	},
 	password: {
 		type: String,
-		require: true,
+		default: '1234'
 	},
-	isDelete: {
+	isDeleted: {
 		type: Boolean,
 		default: false,
-	}
-
+	},		
 });
 
 export default mongoose.model('User', userSchema);

@@ -5,4 +5,10 @@ const createUser = async (req, res) => {
     res.json(newUser);
 };
 
-export { createUser }
+const getAllUsers = async (req, res) => {
+    const users = await User.find();
+    res.json(users);
+
+}
+
+export { createUser, getAllUsers }
