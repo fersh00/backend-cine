@@ -3,39 +3,42 @@ import mongoose from "mongoose";
 const userSchema = new mongoose.Schema({
 	DNI: {
 		type: String,
-		default: '1234'
+		default: 'X',
 	},
 	name: {
 		type: String,
-		default: 'Juan',
+		default: 'X',
 	},
 	lastname: {
 		type: String,
-		default: 'Perez',
+		default: 'X',
 	},
 	dob: {
 		type: String,
-		default: '121212',
+		default: 'X',
 	},
-	rol: {
+	role: {
 		type: String,
-		default: 'Cliente',
+		required: true,
+		enum: ['ADMIN', 'EMPLOYEE', 'CLIENT'],
+		default: 'CLIENT',
 	},
 	phone: {
 		type: String,
-		default: 'XXX XXX XXXX'
+		default: 'X'
 	},
 	email: {
 		type: String,
-		default: 'user@mail.com'
+		required: true,
+		unique: true,
 	},
 	username: {
 		type: String,
-		default: 'juanperez',
+		default: 'X',
 	},
 	password: {
 		type: String,
-		default: '1234'
+		required: true,
 	},
 	isDeleted: {
 		type: Boolean,
